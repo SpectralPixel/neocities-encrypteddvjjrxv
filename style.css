@@ -2,12 +2,46 @@
    HTML content. To learn how to do something, just try searching Google for questions like
    "how to change link color." */
 
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --bg-color: #FFFFFF;
+  --margin: 5%;
+  --border-size: 1px;
+}
+
+@font-face {
+  font-family: "Videotype";
+  src: url("https://encrypteddvjjrxv.neocities.org/videotype.otf") format("opentype");
 }
 
 body {
   background-color: white;
   color: black;
-  font-family: Verdana;
+  margin: 0;
+  font-family: "Videotype";
+  font-size: large;
+  margin: var(--margin);
+  overflow: hidden;
+  display: block;
+}
+
+#topbar {
+  background-color: aquamarine;
+  display: flex;
+  align-items: center;
+}
+
+/* the logo in the topbar
+#logo {
+
+}
+*/
+
+nav {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
