@@ -7,41 +7,77 @@
 }
 
 :root {
-  --bg-color: #FFFFFF;
-  --margin: 5%;
-  --border-size: 1px;
+  --bg-color: #000000;
+  --fg-color: #53585498; /* foreground color */
+  --text-color: #ffffff;
+  --accent1: #78ef6a;
+  --accent2: #35d645;
+  --main-font: "Videotype";
+  --site-margin: 5%;
+  --border-size: 5px;
+  --padding: 10px;
+  --transition-duration: 400ms;
 }
 
 @font-face {
   font-family: "Videotype";
-  src: url("https://encrypteddvjjrxv.neocities.org/videotype.otf") format("opentype");
+  src: url("videotype.otf") format("opentype");
 }
 
 body {
-  background-color: white;
-  color: black;
-  margin: 0;
-  font-family: "Videotype";
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  margin: var(--site-margin);
+
+  font-family: var(--main-font);
   font-size: large;
-  margin: var(--margin);
+
   overflow: hidden;
   display: block;
 }
 
+/* #region TOPBAR */
+
 #topbar {
-  background-color: aquamarine;
+  background-color: var(--fg-color);
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
+  border: var(--border-size) solid;
+  border-radius: 10px;
+  border-color: var(--accent1);
+  padding: var(--padding);
+  transition: var(--transition-duration);
 }
 
-/* the logo in the topbar
-#logo {
-
+#topbar:hover {
+  border-color: var(--accent2);
 }
-*/
+
+#logo p {
+  margin: 0;
+}
 
 nav {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
 }
+
+/* #endregion TOPBAR */
+
+/* #region a{} */
+
+a {
+  color: var(--accent1);
+  text-decoration: none;
+  transition: var(--transition-duration);
+}
+
+a:hover {
+  color: var(--accent2);
+  text-decoration: underline;
+}
+
+/* #endregion a{} */
