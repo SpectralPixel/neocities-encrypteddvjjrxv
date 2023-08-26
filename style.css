@@ -14,7 +14,8 @@
 
   --main-font: "Videotype";
 
-  --site-margin: 5%;
+  --site-margin: 10%;
+  --top-margin: 5%;
   --border-size: 5px;
   --padding: 10px;
   --text-padding: 5px;
@@ -39,9 +40,10 @@ body {
   color: var(--text-color);
 
   margin: var(--site-margin);
+  margin-top: var(--top-margin);
 
   font-family: var(--main-font);
-  font-size: large;
+  font-size: medium;
 
   display: block;
 }
@@ -100,7 +102,8 @@ ul {
   list-style-type: disc;
   margin-block: 0;
   margin-bottom: var(--text-padding);
-  margin-inline: 30px;
+  margin-inline-start: 20px;
+  margin-inline-end: 0;
   padding-inline-start: 0
 }
 
@@ -108,8 +111,8 @@ ul ul {
   display: block;
   list-style-type: circle;
   margin-block: 0;
-  margin-bottom: var(--text-padding);
-  margin-inline: 20px;
+  margin-inline-start: 10px;
+  margin-inline-end: 0;
   padding-inline-start: 0
 }
 
