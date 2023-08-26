@@ -60,6 +60,11 @@ h2 {
   margin-bottom: var(--text-padding);
 }
 
+h3 {
+  margin: 0;
+  margin-bottom: var(--text-padding);
+}
+
 p {
   margin: 0;
   margin-bottom: var(--text-padding);
@@ -90,11 +95,49 @@ a:hover {
   color: var(--accent1);
 }
 
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block: 0;
+  margin-bottom: var(--text-padding);
+  margin-inline: 30px;
+  padding-inline-start: 0
+}
+
+ul ul {
+  display: block;
+  list-style-type: circle;
+  margin-block: 0;
+  margin-bottom: var(--text-padding);
+  margin-inline: 20px;
+  padding-inline-start: 0
+}
+
 /* #endregion */
 
 /* #region CONTENT CLASS */
 
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--padding);
+}
+
+.content-row {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: var(--padding);
+}
+
+.content-column {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--padding);
+}
+
 .content {
+  flex: 1;
+
   padding: var(--padding);
 
   border-left: var(--border-size) solid;
@@ -126,26 +169,6 @@ nav {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
-}
-
-/* #endregion */
-
-/* #region MAIN */
-
-main {
-  display: flex;
-}
-
-#left-area {
-  flex: 2;
-  margin-right: var(--padding);
-  padding: var(--padding);
-}
-
-#main-area {
-  flex: 5;
-
-  padding: var(--padding);
 }
 
 /* #endregion */
