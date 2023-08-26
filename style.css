@@ -52,6 +52,12 @@ body {
 
 /* #region TEXT ELEMENTS */
 
+br {
+  display: block; /* makes it have a width */
+  content: ""; /* clears default height */
+  margin-top: var(--text-padding); /* change this to whatever height you want it */
+}
+
 h1 {
   margin: 0;
   margin-bottom: var(--text-padding);
