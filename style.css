@@ -17,6 +17,7 @@
   --site-margin: 5%;
   --border-size: 5px;
   --padding: 10px;
+  --text-padding: 5px;
   --padding-navbar: 5px;
 
   --transition-duration: 120ms;
@@ -51,33 +52,21 @@ body {
 
 h1 {
   margin: 0;
-  margin-top: calc(var(--padding) / 2);
-  margin-bottom: calc(var(--padding) / 2);
+  margin-bottom: var(--text-padding);
+}
+
+h2 {
+  margin: 0;
+  margin-bottom: var(--text-padding);
 }
 
 p {
   margin: 0;
+  margin-bottom: var(--text-padding);
 }
 
-/* #endregion */
-
-/* #region CONTENT CLASS */
-
-.content {
-  padding: var(--padding);
-
-  border-left: var(--border-size) solid;
-  border-right: var(--border-size) solid;
-
-  background-color: var(--fg-accent);
-  border-color: var(--accent2);
-
-  transition: var(--transition-duration);
-}
-
-.content:hover {
-  background-color: var(--fg-color);
-  border-color: var(--accent1);
+header p {
+  margin: 0;
 }
 
 a {
@@ -103,9 +92,30 @@ a:hover {
 
 /* #endregion */
 
-/* #region TOPBAR */
+/* #region CONTENT CLASS */
 
-#topbar {
+.content {
+  padding: var(--padding);
+
+  border-left: var(--border-size) solid;
+  border-right: var(--border-size) solid;
+
+  background-color: var(--fg-accent);
+  border-color: var(--accent2);
+
+  transition: var(--transition-duration);
+}
+
+.content:hover {
+  background-color: var(--fg-color);
+  border-color: var(--accent1);
+}
+
+/* #endregion */
+
+/* #region HEADER */
+
+header {
   display: flex;
   align-items: center;
 
@@ -124,24 +134,23 @@ nav {
 
 main {
   display: flex;
-  align-items: flex-start;
 }
 
 #left-area {
-  width: 39%;
+  flex: 2;
   margin-right: var(--padding);
   padding: var(--padding);
 }
 
 #main-area {
-  width: 100%;
+  flex: 5;
 
   padding: var(--padding);
 }
 
 /* #endregion */
 
-/* #region NEOCITIES */
+/* #region NEOCITIES LINK */
 
 #neocities {
   position: absolute;
@@ -149,8 +158,22 @@ main {
   top: 0;
 }
 
-#neocities p {
-  display: inline !important;
+/* #endregion */
+
+/* #region BUTTON */
+
+.button {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.button:hover {
+  border: none;
+}
+
+.button img {
+  display: block;
 }
 
 /* #endregion */
