@@ -15,7 +15,8 @@
   --main-font: "Videotype";
 
   --site-margin: 10%;
-  --top-margin: 5%;
+  --microsite-margin: 23%;
+  --top-margin: 2%;
   --border-size: 5px;
   --padding: 10px;
   --text-padding: 5px;
@@ -46,6 +47,16 @@ body {
   font-size: medium;
 
   display: block;
+  overflow: hidden; /* Hide scrollbars */
+}
+
+/* #endregion */
+
+/* #region MICROSITE */
+
+.microsite {
+  margin: var(--microsite-margin);
+  margin-top: var(--top-margin);
 }
 
 /* #endregion */
@@ -180,6 +191,16 @@ nav {
   transform: translate(-50%, 0);
 }
 
+.microsite header {
+  justify-content: space-between;
+}
+
+.microsite nav {
+  position: static;
+  left: auto;
+  transform: none;
+}
+
 /* #endregion */
 
 /* #region NEOCITIES LINK */
@@ -218,6 +239,7 @@ nav {
 
 .inline {
   display: inline !important;
+  text-align: center;
 }
 
 .inline img {
