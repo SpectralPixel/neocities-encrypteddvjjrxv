@@ -32,7 +32,7 @@
 
 @font-face {
   font-family: "Videotype";
-  src: url("videotype.otf") format("opentype");
+  src: url("Assets/videotype.otf") format("opentype");
 }
 
 body {
@@ -51,7 +51,7 @@ body {
 /* #endregion */
 
 /* #region TEXT ELEMENTS */
-
+  
 br {
   display: block; /* makes it have a width */
   content: ""; /* clears default height */
@@ -192,7 +192,7 @@ nav {
 
 /* #endregion */
 
-/* #region BUTTON */
+/* #region SITE BUTTON */
 
 .button {
   padding: 0;
@@ -204,8 +204,25 @@ nav {
   border: none;
 }
 
+.button a {
+  display: inline;
+}
+
 .button img {
   display: block;
 }
 
 /* #endregion */
+
+/* #region MISC CLASSES */
+
+.inline {
+  display: inline !important;
+}
+
+.inline img {
+  display: inline !important;
+}
+
+/* #endregion */
+
