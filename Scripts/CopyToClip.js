@@ -13,7 +13,7 @@ async function copyToClipboard(text, element){
             console.log("Clipboard data set to " + text + ".");
         },
         () => { /* clipboard write failed */
-            element.innerHTML = "Something went wrong...";
+            element.innerHTML = "ERROR";
             console.error("Clipboard data could not be set!");
         },
     );

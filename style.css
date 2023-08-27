@@ -191,16 +191,6 @@ nav {
   transform: translate(-50%, 0);
 }
 
-.microsite header {
-  justify-content: space-between;
-}
-
-.microsite nav {
-  position: static;
-  left: auto;
-  transform: none;
-}
-
 /* #endregion */
 
 /* #region NEOCITIES LINK */
@@ -239,10 +229,18 @@ nav {
 
 .inline {
   display: inline !important;
-  text-align: center;
 }
 
 .inline img {
+  display: inline !important;
+}
+
+.center-inline {
+  display: inline !important;
+  vertical-align: middle;
+}
+
+.center-inline img {
   display: inline !important;
 }
 
