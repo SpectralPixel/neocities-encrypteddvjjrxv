@@ -13,6 +13,7 @@
   --transparent: #00000000;
 
   --main-font: "Videotype";
+  --font-size: 1em; /* 1em == "medium" */
 
   --site-margin: 10%;
   --microsite-margin: 23%;
@@ -44,7 +45,7 @@ body {
   margin-top: var(--top-margin);
 
   font-family: var(--main-font);
-  font-size: medium;
+  font-size: var(--font-size);
 
   display: block;
   overflow: hidden; /* Hide scrollbars */
@@ -95,22 +96,30 @@ header p {
 
 a {
   text-decoration: none;
-  padding-left: 2px;
-  padding-right: 2px;
-  
-  border-color: var(--transparent) !important;
-  border-left: var(--border-size) solid;
-  border-right: var(--border-size) solid;
 
   color: var(--accent2);
   transition: var(--transition-duration);
 }
 
 a:hover {
-  border-color: var(--accent1) !important;
-  border-left: var(--border-size) solid;
-  border-right: var(--border-size) solid;
+  color: var(--accent1);
+}
 
+a::before {
+  content: "[ ";
+  color: var(--transparent);
+}
+
+a:hover::before {
+  color: var(--accent1);
+}
+
+a::after {
+  content: " ]";
+  color: var(--transparent);
+}
+
+a:hover::after {
   color: var(--accent1);
 }
 
@@ -209,6 +218,14 @@ nav {
   padding: 0;
   margin: 0;
   border: none;
+}
+
+.button::before {
+  content: "";
+}
+
+.button::after {
+  content: "";
 }
 
 .button:hover {
