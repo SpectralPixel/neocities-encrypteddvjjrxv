@@ -193,6 +193,12 @@ main {
   border-left: var(--border-size) solid;
   border-right: var(--border-size) solid;
   border-color: var(--accent2);
+
+  transition: var(--transition-duration);
+}
+
+.subcontent:hover {
+  border-color: var(--accent1);
 }
 
 /* #endregion */
@@ -323,8 +329,19 @@ nav {
 
 /* #region WEBKIT */
 
+
 ::-webkit-scrollbar {
-  width: 0;
+  width: var(--border-size);
+  background: none;
+}
+::-webkit-scrollbar-track {
+  background: none;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent1);
 }
 
 /* #endregion */

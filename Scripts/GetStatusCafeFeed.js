@@ -1,4 +1,4 @@
-// thanks punkwasp! i "borrowed" this from your site and remixed it a bit
+// thanks punkwasp! i "borrowed" this from your site and remixed it a bit to fit my needs
 
 const feedURL = 'https://status.cafe/users/encrypteddvjjrxv.atom';
 
