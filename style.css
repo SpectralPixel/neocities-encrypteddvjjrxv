@@ -315,7 +315,7 @@ nav {
 /* #region IDs */
 
 #status-cafe-feed {
-  max-height: 7.5em;/*  */
+  max-height: 10em;
   overflow: auto;
 }
 
@@ -326,7 +326,6 @@ nav {
 ::-webkit-scrollbar {
   width: 0;
 }
-
 
 /* #endregion */
 
