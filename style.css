@@ -261,5 +261,30 @@ nav {
   display: inline !important;
 }
 
+.ul-table {
+  display: flex;
+  align-content: flex-start;
+}
+
+.ul-column {
+  width: fit-content;
+}
+
+.ul-column li {
+  width: auto;
+}
+
+.text-column {
+  list-style: none;
+  margin: 0;
+  margin-left: 2em;
+}
+
+.text-column li {
+  width: auto;
+}
+
 /* #endregion */
 
+/* #region REGION */
+/* #endregion */
