@@ -173,7 +173,6 @@ function CellularAutomata(){
             }
         }
     }
-    console.log(liveCellsNextGen, minimumCells)
 
     // randomly kill or revive cells
     for (let i = liveCellsNextGen; i < minimumCells; i++){
