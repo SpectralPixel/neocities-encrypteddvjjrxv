@@ -346,5 +346,18 @@ nav {
 
 /* #endregion */
 
+/* #region CANVAS */
+
+canvas {
+  z-index: -1;
+  border: 1px dotted black;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* #endregion */
+
+
 /* #region REGION */
 /* #endregion */
