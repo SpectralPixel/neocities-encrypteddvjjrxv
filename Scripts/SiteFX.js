@@ -20,17 +20,17 @@ let context = my_canvas.getContext("2d");
 let liveCellColor = getComputedStyle(document.documentElement).getPropertyValue('--bg-accent');
 let deadCellColor = getComputedStyle(document.documentElement).getPropertyValue('--bg-color');
 
-let generationTime = 100; // in ms
+let generationTime = 120; // in ms
 
 let viewportWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
 let viewportHeight = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
 
-let gridRes = 50;
+let gridRes = 30;
 let gridWidth = Math.floor(gridRes * viewportWidth / viewportHeight);
 let gridHeight = Math.floor(gridRes);
 let cellSize = my_canvas.width / gridWidth;
 let cellBorder = 0.05;
-let minimumCells = 150; // if the amount of cells goes below this value, just spawn some in
+let minimumCells = Math.floor(gridRes * 2.7); // if the amount of cells goes below this value, just spawn some in (https://www.desmos.com/calculator/xpph21ow6j)
 
 let grid = new Array(gridWidth);
 let nextGrid = new Array(gridWidth);
@@ -174,11 +174,13 @@ function CellularAutomata(){
         }
     }
 
+    //console.log(liveCellsNextGen, minimumCells);
     // randomly kill or revive cells
     for (let i = liveCellsNextGen; i < minimumCells; i++){
         let randomX = Math.floor(Math.random() * gridWidth);
         let randomY = Math.floor(Math.random() * gridHeight);
         nextGrid[randomX][randomY] = 1;
+        //console.log("Revived a cell!");
     }
 
     // copy and reset

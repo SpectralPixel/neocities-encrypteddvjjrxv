@@ -5,7 +5,7 @@
 :root {
   --bg-color: #000000;
   --bg-accent: #012507;
-  --fg-color: #53585498; /* foreground color */
+  --fg-color: #363b38e7; /* foreground color */
   --fg-accent: #727b7453; /* foreground color, when the area is not hovered over */
   --text-color: #ffffff;
   --accent1: #78ef6a;
@@ -184,6 +184,10 @@ main {
 }
 
 .subcontent {
+  /* max-height should be specified in <tag style="max-height: Xem;"> */
+
+  overflow: auto;
+
   flex: 1;
 
   padding: var(--padding);
@@ -260,7 +264,7 @@ nav {
 
 /* #endregion */
 
-/* #region MISC CLASSES */
+/* #region INLINE */
 
 .inline {
   display: inline !important;
@@ -278,6 +282,10 @@ nav {
 .center-inline img {
   display: inline !important;
 }
+
+/* #endregion */
+
+/* #region UL-TABLE */
 
 .ul-table {
   display: flex;
@@ -302,7 +310,60 @@ nav {
   width: auto;
 }
 
-.status-cafe-entry {
+/* #endregion */
+
+/* #region FEED */
+
+.feed {
+  /* max-height should be specified in <tag style="max-height: Xem;"> */
+  overflow: auto;
+}
+
+.feed div {
+  margin-bottom: var(--padding);
+}
+
+.feed div :first-child {
+  text-align: center;
+}
+
+.feed p {
+  margin: 0;
+}
+  
+.feed br {
+  margin: 0;
+}
+
+/* #endregion */
+
+/* #region MISC CLASSES */
+
+.blog-post {
+  max-height: 40em;
+  min-width: 20em;
+}
+
+.horizontal-scroll {
+  /* max-height should be specified in <tag style="max-height: Xem;"> */
+  
+  display: flex;
+  flex-flow: row nowrap;
+  gap: var(--padding);
+
+  overflow-x: auto;
+}
+
+/* #endregion */
+
+/* #region IDs */
+
+#status-cafe-feed {
+  max-height: 9em;
+  overflow: auto;
+}
+
+#status-cafe-feed div {
   display: flex;
   flex-flow: row nowrap;
   gap: var(--padding);
@@ -311,18 +372,9 @@ nav {
   margin-bottom: var(--text-padding);
 }
 
-.status-cafe-entry p {
+#status-cafe-feed p {
   margin: 0;
   min-width: 7.5em;
-}
-
-/* #endregion */
-
-/* #region IDs */
-
-#status-cafe-feed {
-  max-height: 10em;
-  overflow: auto;
 }
 
 /* #endregion */
@@ -332,6 +384,7 @@ nav {
 
 ::-webkit-scrollbar {
   width: var(--border-size);
+  height: var(--border-size);
   background: none;
 }
 ::-webkit-scrollbar-track {

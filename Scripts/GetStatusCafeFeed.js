@@ -14,7 +14,7 @@ fetch(feedURL).then(response=>response.text()).then(str=>new window.DOMParser().
         let month = dateString.slice(5, 7);
         let day = dateString.slice(8, 10);
         html += `
-                <div class="status-cafe-entry">
+                <div>
                     <p>&lsqb;<i>${dateString}</i>&rsqb;</p>
                     <p>${content}</p>
                 </div>

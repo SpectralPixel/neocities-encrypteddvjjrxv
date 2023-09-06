@@ -11,6 +11,11 @@
   
   <body>
 
+    <canvas id="canvas" width="200" height="200">
+      This text is displayed if your browser does not support HTML5 Canvas.
+    </canvas>
+    <script src="Scripts/SiteFX.js"></script>
+
     <script src="Scripts/CopyToClip.js"></script>
 
     <header class="content">
@@ -21,9 +26,9 @@
 
       <nav>
         <a href="index.html">Homepage</a>
-        <a href="about_me.html">About Me</a>
-        <a href="not_found.html">Projects</a>
-        <a href="not_found.html">Journal</a>
+        <a href="about_me.html">Webmaster</a>
+        <a href="blogs.html">Blog</a>
+        <a href="not_found.html">Shrines</a>
       </nav>
     </header>
     
@@ -41,12 +46,10 @@
               </ul>
               <li><a href="about_me.html">About Me</a></li>
               <ul>
-                <li><a href="not_found.html">GlumboCoin(TM)!!!! (UC)</a></li>
                 <li><a href="autism_info.html">Autism Info</a></li>
-                <li><a href="not_found.html">Interest Graveyard (UC)</a></li>
               </ul>
-              <li><a href="not_found.html">Projects (UC)</a></li>
-              <li><a href="not_found.html">Journal (UC)</a></li>
+              <li><a href="not_found.html">Blog (UC)</a></li>
+              <li><a href="not_found.html">Shrines (UC)</a></li>
             </ul>
             <p>
               UC = Under Construction
@@ -74,44 +77,91 @@
           </div>
         </div>
 
-        <div class="content" style="flex: 20;">
-          <h1>
-            Welcome!
-          </h1>
-          <p>
-            Looks like you've stumbled across my personal website!<br>
-            You seemed like a cool person I decrypted the site for you, just be aware that not everyone gets to see the unscrambled contents of this place so don't go around sending this to all your friends! /s<br>
-            This is where I post updates about any projects I'm working on, and anything else that I think is worth sharing with you guys!
-          </p>
+        <div class="content-column" style="flex: 20;">
+          <div class="content">
+            <h1>
+              Welcome!
+            </h1>
+            <p>
+              Looks like you've stumbled across my personal website!<br>
+              You seemed like a cool person I decrypted the site for you, just be aware that not everyone gets to see the unscrambled contents of this place so don't go around sending this to all your friends! /s<br>
+              This is where I post updates about any projects I'm working on, and anything else that I think is worth sharing with you guys!
+            </p>
 
-          <h2>
-            Who dis?
-          </h1>
-          <p>
-            Hi! I'm a 15 year old, neurodivergent internet goober and I go by [I need a shorter alias].<br>
-            I'm good at programming, and I like making games with Unity in my free time.
-          </p>
+            <h2>
+              How can I make a site as cool as yours???
+            </h2>
+            <p class="inline">
+              heh, thanks me.<br>
+              Anyways, you can find my tutorial here: 
+            </p>
+            <a class="inline" href="how-to-website.html">My tutorial here</a><br>
+            <p>
+              Oh, and feel free to [INSPECT ELEMENT] my site! I'm fine with it as long as I don't see an exact copy of it floating around. This site is actually a remix of other sites I found cool!
+            </p>
+          </div>
 
-          <h2>
-            How can I make a site as cool as yours???
-          </h2>
-          <p class="inline">
-            heh, thanks me.<br>
-            Anyways, you can find my tutorial here: 
-          </p>
-          <a class="inline" href="how-to-website.html">My tutorial here</a><br>
-          <p>
-            Oh, and feel free to [INSPECT ELEMENT] my site! I'm fine with it as long as I don't see an exact copy of it floating around. This site is actually a remix of other sites I found cool!
-          </p>
+          <div class="content" style="flex: 5;">
+            <h2 class="inline">What I'm up to rn</h2>
+            <a class="inline" href="https://status.cafe">via status.cafe</a><br>
+            <div class="subcontent" id="status-cafe-feed">
+              <div>
+                <p>&lsqb;<i>20XX-XX-XX</i>&rsqb;</p>
+                <p>LOADING CONTENT...</p>
+              </div>
+              <div>
+                <p>&lsqb;<i>20XX-XX-XX</i>&rsqb;</p>
+                <p>Please be patient, this may take a couple of seconds.</p>
+              </div>
+              <div>
+                <p>&lsqb;<i>20XX-XX-XX</i>&rsqb;</p>
+                <p>Or possibly even minutes! I don't know how godawful your internet it (or fast!)</p>
+              </div>
+              <div>
+                <p>&lsqb;<i>20XX-XX-XX</i>&rsqb;</p>
+                <p>If it isn't loading, though luck. Either something has changed behind the scenes and my site isn't up to date, or the server are down (possibly forever, that's scary to think about yet it's happened to so many old sites already)</p>
+              </div>
+              <div>
+                <p>&lsqb;<i>20XX-XX-XX</i>&rsqb;</p>
+                <p>HI FUTURE ME!!!! THIS IS A MESSAGE FROM 2023!!! DID YOU GET LAID YET????????? (i sincerely apoligize to anyone who isn't future me)</p>
+              </div>
+            </div>
+            <script src="Scripts/GetStatusCafeFeed.js"></script>
+          </div>
         </div>
 
         <div class="content" style="flex: 8;">
           <h1>
-            Spotlight
+            Updates
           </h1>
-          <p>
-            (there's nothing here yet)
-          </p>
+          <div class="feed" style="max-height: 35em;"> <!-- More recent entries at top! -->
+            <div>
+              <p>[2023-09-06]</p>
+              <p>
+                New blog post!!<br>
+                (oh and that whole page in general)
+              </p>
+            </div>
+            <div>
+              <p>[2023-09-01]</p>
+              <p>
+                Added/moved some content on the site!
+              </p>
+            </div>
+            <div>
+              <p>[2023-08-31]</p>
+              <p>
+                I've scaled down and slowed the game of life to make the site less laggy!<br>
+                Also improved this updates section, it was looking quite shabby (as Stampy would say... haha).<br>
+              </p>
+            </div>
+            <div>
+              <p>[2023-08-30]</p>
+              <p>
+                I've finally decided to track updates! Enjoy the new background, it's a simulation of the game of life.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </main>
