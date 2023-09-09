@@ -1,17 +1,3 @@
-// #region ----- CUSTOM VARIABLES -----
-
-function makeStruct(names) {
-    names = names.split(' ');
-    let count = names.length;
-    function constructor() {
-        for (let i = 0; i < count; i++) {
-            this[names[i]] = arguments[i];
-        }
-    }
-    return constructor;
-}
-
-// #endregion 
 // #region ----- ALL VARIABLES -----
 
 let my_canvas = document.getElementById('canvas')
