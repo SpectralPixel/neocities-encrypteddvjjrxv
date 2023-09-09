@@ -165,6 +165,8 @@ main {
 }
 
 .content {
+  position: relative;
+  
   flex: 1;
 
   padding: var(--padding);
