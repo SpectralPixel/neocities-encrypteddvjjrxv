@@ -207,7 +207,6 @@ context.strokeStyle = deadCellColor;
 // #region ----- RUNTIME -----
 
 function Update(){
-    console.clear();
     CellularAutomata();
     // Revive some dead cells here?
     DrawFrame();
