@@ -224,7 +224,7 @@ function DrawFrame(){
 Update();
 Update();
 Update();
-setTimeout(function(){ setInterval(Update, generationTime); }, 1000);
+setTimeout(function(){ setInterval(Update, generationTime); }, 500);
 
 // #endregion 
 
