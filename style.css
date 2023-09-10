@@ -166,7 +166,7 @@ main {
 
 .content {
   position: relative;
-  
+
   flex: 1;
 
   padding: var(--padding);
@@ -269,20 +269,20 @@ nav {
 /* #region INLINE */
 
 .inline {
-  display: inline !important;
+  display: inline;
 }
 
 .inline img {
-  display: inline !important;
+  display: inline;
 }
 
 .center-inline {
-  display: inline !important;
+  display: inline;
   vertical-align: middle;
 }
 
 .center-inline img {
-  display: inline !important;
+  display: inline;
 }
 
 /* #endregion */

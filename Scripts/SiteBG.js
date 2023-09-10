@@ -221,8 +221,10 @@ function DrawFrame(){
     }
 }
 
-setInterval(Update, generationTime);
-//Update();
+Update();
+Update();
+Update();
+setTimeout(function(){ setInterval(Update, generationTime); }, 1000);
 
 // #endregion 
 
